@@ -1,3 +1,4 @@
+
 import { Component, OnInit, ViewChild, ElementRef, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { Location } from '@angular/common';
@@ -11,6 +12,7 @@ const USER_DEFAULT_ICON = {
 };
 
 @Component({
+  moduleId: module.id,
   selector: 'vidal-toolbar',
   templateUrl: './toolbar.component.html',
   styleUrls: ['./toolbar.component.css']
