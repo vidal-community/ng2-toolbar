@@ -6,9 +6,9 @@
   "scripts": {
     "test": "ng test",
     "lint": "ng lint",
-    "build": "rm -rf lib && ngc -p .",
+    "build": "rm -rf lib && ngc -p . && cp src/lib/*.html src/lib/*.css ./lib",
     "pack": "rm -rf lib vidal-*.tgz && ngc -p .",
-    "prepublish": "ngc -p .",
+    "prepublish": "ngc -p . && cp src/lib/*.html src/lib/*.css ./lib",
     "postpublish": "rm -rf lib"
   },
   "types": "./index.d.ts",
