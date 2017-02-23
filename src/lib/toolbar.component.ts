@@ -6,16 +6,17 @@ import { Observable } from 'rxjs/Rx';
 import { DiscoveryService, Service } from 'vidal-ng2-discovery';
 import { SesameService } from 'vidal-ng2-sesame';
 
+import {HTML, CSS} from './toolbar.str';
+
 const USER_DEFAULT_ICON = {
   'background': 'url(assets/images/photo.png) no-repeat center',
   'background-size': '100%'
 };
 
 @Component({
-  moduleId: module.id,
   selector: 'vidal-toolbar',
-  templateUrl: './toolbar.component.html',
-  styleUrls: ['./toolbar.component.css']
+  template: HTML,
+  styles: [CSS]
 })
 export class ToolbarComponent implements OnInit {
   @ViewChild('searchBtn') searchBtn: ElementRef;
