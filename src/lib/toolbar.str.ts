@@ -4,7 +4,7 @@ export const HTML = `<nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
       <a class="logo navbar-brand" routerLink="">
-        <img alt="Vidal" [src]="logo">
+        <img [alt]="applicationName" [src]="logo">
       </a>
       <a class="application-name navbar-brand" routerLink="">
         <span>{{applicationName}}</span>
