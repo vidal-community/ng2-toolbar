@@ -8,6 +8,8 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { Routes } from '@angular/router';
 import { HttpModule, Http, BaseRequestOptions, Response, ResponseOptions, RequestMethod } from '@angular/http';
 
+import { DropdownModule } from 'ng2-bootstrap';
+
 import { DiscoveryService } from 'vidal-ng2-discovery';
 import { SesameService } from 'vidal-ng2-sesame';
 
@@ -43,8 +45,8 @@ describe('Vidal toolbar component', () => {
     mockDiscovery = new MockDiscovery();
 
     TestBed.configureTestingModule({
-      imports: [ FormsModule, RouterTestingModule.withRoutes(fake_routes) ],
-      declarations: [ToolbarComponent],
+      imports: [ FormsModule, RouterTestingModule.withRoutes(fake_routes), DropdownModule.forRoot() ],
+      declarations: [ToolbarComponent, ],
       providers: [
         { provide: DiscoveryService, useValue: mockDiscovery},
         { provide: SesameService, useValue: mockSesame}

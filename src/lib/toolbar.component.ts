@@ -87,20 +87,10 @@ export class ToolbarComponent implements OnInit {
 
   updateApps(): void {
     this.applications = this.discovery.services('APPLICATION');
-    // this.applications = Observable.of([
-    //   { shortDescription: 'toto', url: '#' },
-    //   { shortDescription: 'titi', url: '#' },
-    //   { shortDescription: 'tutu', url: '#' },
-    // ]);
   }
 
   updateSearch(value): void {
     this.searches = this.discovery.services('search', [value]);
-    // this.searches = Observable.of([
-    //   { shortDescription: 'toto', url: '#' },
-    //   { shortDescription: 'titi', url: '#' },
-    //   { shortDescription: 'tutu', url: '#' },
-    // ]);
   }
 
   showSearch(): void {
