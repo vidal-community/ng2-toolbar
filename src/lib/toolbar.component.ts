@@ -86,7 +86,11 @@ export class ToolbarComponent implements OnInit {
   }
 
   updateApps(): void {
-    this.applications = this.discovery.services('APPLICATION');
+    this.applications = this.discovery
+      .services('APPLICATION')
+      .map(apps =>
+        apps.sort((s1, s2) => s1.shortDescription.localeCompare(s2.shortDescription))
+      );
   }
 
   updateSearch(value): void {
