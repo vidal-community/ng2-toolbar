@@ -1,6 +1,6 @@
 
 
-export const HTML = `<nav class="navbar navbar-default">
+export const HTML = `<nav class="navbar navbar-default navbar-fixed-top">
   <div class="container-fluid">
     <div class="navbar-header">
       <a class="logo navbar-brand" routerLink="">
