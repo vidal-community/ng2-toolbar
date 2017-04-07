@@ -25,7 +25,7 @@ export const HTML = `<nav class="navbar navbar-default navbar-fixed-top">
                 dropdownToggle
                 (click)="updateSearch(search)"
                 #searchBtn><span class="glyphicon glyphicon-search" aria-hidden="true"></span></a>
-              <ul class="search-results" dropdownMenu>
+              <ul class="search-results" *dropdownMenu>
                   <li *ngFor="let search of searches | async">
                     <a class="dropdown-item" href="{{search.url}}">
                       {{search.shortDescription}}
@@ -38,7 +38,7 @@ export const HTML = `<nav class="navbar navbar-default navbar-fixed-top">
 
         <li class="big applications" dropdown keyboardNav="true">
           <a dropdownToggle (click)="updateApps()"><span class="glyphicon glyphicon-th"></span></a>
-          <ul dropdownMenu>
+          <ul *dropdownMenu>
             <li *ngFor="let app of applications | async">
               <a href="{{app.url}}">
                 <img *ngIf="app.meta?.icon" src="{{app.url + app.meta.icon}}"/>
@@ -50,7 +50,7 @@ export const HTML = `<nav class="navbar navbar-default navbar-fixed-top">
 
         <li id="not-logged" dropdown class="big" *ngIf="!username" >
           <a dropdownToggle id="login-dropdown"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></a>
-          <div dropdownMenu aria-labelledby="login-dropdown" class="login-menu" (keyup.enter)="connect()">
+          <div *dropdownMenu aria-labelledby="login-dropdown" class="login-menu" (keyup.enter)="connect()">
             <div>
               <input [(ngModel)]="login" placeholder="Login" />
             </div>
@@ -66,7 +66,7 @@ export const HTML = `<nav class="navbar navbar-default navbar-fixed-top">
             <div class="circular userIcon" [ngStyle]="userIcon" placement="left"></div>
           </a>
 
-          <div dropdownMenu aria-labelledby="user-dropdown" style="padding: 15px;">
+          <div *dropdownMenu aria-labelledby="user-dropdown" style="padding: 15px;">
             <button class="btn btn-danger btn-s" (click)="logout()"><span class="glyphicon glyphicon-off"></span>
                 Déconnexion
             </button>
