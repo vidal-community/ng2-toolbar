@@ -38,7 +38,7 @@ export const HTML = `<nav class="navbar navbar-default navbar-fixed-top">
 
         <li class="big applications" dropdown keyboardNav="true">
           <a dropdownToggle (click)="updateApps()"><span class="glyphicon glyphicon-th"></span></a>
-          <ul *dropdownMenu>
+          <ul *dropdownMenu class="dropdown-menu" role="menu">
             <li *ngFor="let app of applications | async">
               <a href="{{app.url}}">
                 <img *ngIf="app.meta?.icon" src="{{app.url + app.meta.icon}}"/>
