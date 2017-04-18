@@ -23,7 +23,7 @@
                 dropdownToggle
                 (click)="updateSearch(search)"
                 #searchBtn><span class="glyphicon glyphicon-search" aria-hidden="true"></span></a>
-              <ul class="search-results" *dropdownMenu>
+              <ul class="search-results dropdown-menu" role="menu" *dropdownMenu>
                   <li *ngFor="let search of searches | async">
                     <a class="dropdown-item" href="{{search.url}}">
                       {{search.shortDescription}}
@@ -48,7 +48,7 @@
 
         <li id="not-logged" dropdown class="big" *ngIf="!username" >
           <a dropdownToggle id="login-dropdown"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></a>
-          <div *dropdownMenu aria-labelledby="login-dropdown" class="login-menu" (keyup.enter)="connect()">
+          <div *dropdownMenu aria-labelledby="login-dropdown" class="login-menu dropdown-menu" role="menu" (keyup.enter)="connect()">
             <div>
               <input [(ngModel)]="login" placeholder="Login" />
             </div>
@@ -64,7 +64,7 @@
             <div class="circular userIcon" [ngStyle]="userIcon" placement="left"></div>
           </a>
 
-          <div *dropdownMenu aria-labelledby="user-dropdown" style="padding: 15px;">
+          <div *dropdownMenu class="dropdown-menu" role="menu" style="padding: 15px;">
             <button class="btn btn-danger btn-s" (click)="logout()"><span class="glyphicon glyphicon-off"></span>
                 Déconnexion
             </button>
