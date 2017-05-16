@@ -3536,9 +3536,9 @@ next-tick@~0.2.2:
   version "0.2.2"
   resolved "https://registry.yarnpkg.com/next-tick/-/next-tick-0.2.2.tgz#75da4a927ee5887e39065880065b7336413b310d"
 
-ngx-bootstrap@^1.6.5:
-  version "1.6.5"
-  resolved "https://registry.yarnpkg.com/ngx-bootstrap/-/ngx-bootstrap-1.6.5.tgz#cb5b2d1af5828a24fe049e0942a4899cdfea4e9c"
+ngx-bootstrap@next:
+  version "2.0.0-beta.2"
+  resolved "https://registry.yarnpkg.com/ngx-bootstrap/-/ngx-bootstrap-2.0.0-beta.2.tgz#4accf1b09994b3270c2bcd270f3e88c9a829e2ac"
   dependencies:
     moment "2.18.1"
 
