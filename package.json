@@ -8,7 +8,7 @@
     "lint": "ng lint",
     "build": "rm -rf lib && ngc -p .",
     "pack": "rm -rf lib vidal-*.tgz && ngc -p .",
-    "prepublish": "ngc -p .",
+    "prepublishonly": "ngc -p .",
     "postpublish": "rm -rf lib"
   },
   "types": "./index.d.ts",
@@ -26,7 +26,7 @@
     "ngx-bootstrap": "next",
     "rxjs": "^5.1.1",
     "ts-helpers": "^1.1.1",
-    "vidal-ng2-discovery": "^1.0.4",
+    "vidal-ng2-discovery": "^1.0.11",
     "vidal-ng2-sesame": "^1.0.1",
     "zone.js": "^0.7.2"
   },
